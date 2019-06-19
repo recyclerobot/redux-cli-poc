@@ -1,0 +1,16 @@
+{
+  "name": "redux-on-the-backend",
+  "version": "1.0.0",
+  "description": "Code Example of how to use Redux through CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^2.20.0",
+    "esm": "^3.2.25",
+    "redux": "^4.0.1"
+  }
+}
