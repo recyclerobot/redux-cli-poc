@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Thijs Bernolet",
+  "license": "MIT",
   "devDependencies": {
     "commander": "^2.20.0",
     "esm": "^3.2.25",

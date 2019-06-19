@@ -20,3 +20,10 @@ chmod +x ./index.js
 ```
 ./index.js --help
 ```
+
+### Example commands:
+
+```
+./index.js action -t updateTimestamps -i 100,500
+./index.js action -t appropriate -i true
+```
