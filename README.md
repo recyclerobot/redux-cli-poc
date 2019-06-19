@@ -24,6 +24,6 @@ chmod +x ./index.js
 ### Example commands:
 
 ```
-./index.js action -t updateTimestamps -i 100,500
-./index.js action -t appropriate -i true
+./index.js --log-store action -t updateTimestamps -i 100,500
+./index.js --log-store action -t appropriate -i true
 ```

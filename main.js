@@ -10,6 +10,8 @@ const store = createStore(reducer);
 // Helper
 const list = val => val.split(",");
 
+program.option("-s, --log-store", "log complete redux store");
+
 program
   .command("action")
   .option("-t, --type <ActionType>", "Set Action Type")
@@ -19,16 +21,18 @@ program
     list
   )
   .action(function(action) {
-    console.log("action type:", action.type);
-    console.log("action inputs:", action.inputs);
-    console.log("========================");
+    const appliedAction = actions[action.type].apply(this, action.inputs);
+    console.log("⚡️ action:");
+    console.log(JSON.stringify(appliedAction, null, 2));
     store.dispatch(actions[action.type].apply(this, action.inputs));
   });
 
 program.parse(process.argv);
 
-// final stout
-const storeState = JSON.stringify(store.getState(), null, 2);
-console.log(storeState);
+if (program.logStore) {
+  console.log("📕 store:");
+  const storeState = JSON.stringify(store.getState(), null, 2);
+  console.log(storeState);
+}
 
 export default program;
